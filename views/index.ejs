@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Você vai voar menor</h1>
+    <header>
+        <h1>Pokedex</h1>
+    </header>
+    <main>
+        <section id="cards">
+            <% pokedex.forEach((pokemon) => { %>
+                <div class="card">
+                    <img src="<%= pokemon.imagem %> " alt="">
+                    <h2><%= pokemon.nome %> </h2>
+                    <p class="descricao"><%= pokemon.descricao %> </p>
+                    <p>Tipo: <%= pokemon.tipo %> </p>
+                </div>
+            <% }) %>
+        </section>
+    </main>
+
 </body>
 </html>
