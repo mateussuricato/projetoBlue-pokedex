@@ -4,17 +4,39 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 header {
-    padding: 3rem;
+    width: 100%;
+    position: fixed;
     background-color: red;
 }
 
-header > h1 {
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li {
+   padding: 10px;
+}
+
+header nav img {
+    width: 50px;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
     color: white;
-    font-size: 3rem;
-    text-align: center;
+}
+
+.banner img {
+    margin-top: 70px;
+    width: 100%;
 }
 
 main {
@@ -24,7 +46,6 @@ main {
 section#cards {
     display: flex;
     flex-wrap: wrap;
-    display: flex;
     justify-content: space-evenly;
     margin-top: 5rem;
 }
@@ -49,25 +70,75 @@ section#cards div.card p.descricao{
     margin-bottom: 1rem;
 }
 
+section#cards div.card div#aling {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#cards div.card div#aling a#editar {
+    padding: 10px 30px 10px 30px;
+    width: 15%;
+    display: flex;
+    margin: 30px auto 0 auto;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    border: solid 1px rgb(55, 0, 255);
+    color: rgb(89, 0, 255);
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+section#cards div.card div#aling  a#apagar {
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    width: 15%;
+    margin: 30px auto 0 auto;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    border: solid 1px rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
 body {
     background-color: white;
 }
 
 #cadastro {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 60px;
+    margin-top: 50px;
 }
 
-#cadastro h1 {
+#cadastro img {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+#cadastro div {
+    margin-top: 30px;
+    width: 50%;
+}
+
+#cadastro div h1 {
     text-align: center;
     width: 100%;
     padding-bottom: 60px;
 }
 
 #cadastro form {
-    width: 50%;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
 }
 
 #cadastro form input{
@@ -95,4 +166,20 @@ body {
 #cadastro form button:hover {
     background-color: red;
     color: white;
+}
+
+footer {
+    background-color: blueviolet;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+footer p a {
+    color: yellow;
 }
