@@ -3,7 +3,7 @@
 ## Descrição
 Esse projeto foi realizado para o curso da Blue EdTech módulo II.
 
-Clique na imagem abaixo para acessar o projeto:
+Clique na imagem(pokeball) abaixo para acessar o projeto:
 
 <a href="https://pokedexmateussuricato.herokuapp.com/" target="_blank"><img style="width:10%" src="./public/img/PokéBall.png" alt="ícone pokedex"></a>
 
