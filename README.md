@@ -5,7 +5,7 @@ Esse projeto foi realizado para o curso da Blue EdTech módulo II.
 
 Clique no link abaixo para acessar o projeto:
 
-<a href="https://pokedexthabata.herokuapp.com/" target="_blank"><img style="width:10%" src="./public/css/PokéBall.icon.png" alt="ícone pokedex"></a>
+<a href="https://pokedexthabata.herokuapp.com/" target="_blank"><img style="width:10%" src="./public/img/PokéBall.png" alt="ícone pokedex"></a>
 
 ## Stacks
 Ferramentas usadas:
