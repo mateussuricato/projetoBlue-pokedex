@@ -40,56 +40,57 @@ header nav ul li a {
 }
 
 main {
-    margin: 0 10px;
-}
- 
-section.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+    margin: auto;
+    max-width: 1100px;
 }
 
-section.cards div.card{
-    width: 20rem;
-    box-shadow: 5px 5px 5px 5px #00000015;
-    padding: 1rem;
-    margin-left: 20px;
-    margin-top: 30px;
-    border-radius: 30px;
-}
-
-section.cards a {
-    text-decoration: none;
-    color: black;
+h1 {
+    margin: 20px 0 20px 0;
     text-align: center;
-    transition: transform .5s;
-    text-transform: uppercase;
 }
 
-section.cards a:hover {
-    transform: scale(1.1);
-}
-
-section.cards div.card img{
-    width: 100%;
-}
-
-section.cards div.card h2{
-    margin-bottom: 1rem;
-}
-
-section.cards div.card p.descricao{
-    margin-bottom: 1rem;
-}
-
-section.cards div.card div#aling {
+.cadastro {
     display: flex;
     flex-wrap: wrap;
 }
 
-body {
+.cadastro img {
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+}
+
+.cadastro div form {
+    padding: 50px;
+}
+
+.cadastro div form a {
+    text-decoration: none;
+}
+
+.cadastro div form input {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.cadastro div form button {
+    display: block;
+    border: 1px solid blue;
     background-color: white;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    color: blue;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.cadastro div form p {
+    color: red;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -98,7 +99,7 @@ footer {
     padding-top: 5px;
     padding-bottom: 5px;
     color: white;
-    margin-top: 110px;
+    margin-top: 130px;
     position: absolute;
     width: 100%;
     bottom: 10;

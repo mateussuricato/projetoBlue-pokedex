@@ -13,6 +13,10 @@ const pokedex = [
       "Há uma semente de planta nas costas desde o dia em que este Pokémon nasce. A semente cresce lentamente.",
     tipo: "Glass",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    altura: "0,7 m",
+    peso: "6,9 kg",
+    categoria: "Seed",
+    habilidades: "Overgrow",
   },
   {
     id: 2,
@@ -21,6 +25,10 @@ const pokedex = [
       "A chama que queima na ponta da sua cauda é um indicador de suas emoções. A chama oscila quando Charmander está contente. Se o Pokémon fica com raiva, a chama queima violentamente.",
     tipo: "Fire",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    altura: "0.6 m",
+    peso: "8,5 kg",
+    categoria: "Lizard",
+    habilidades: "Blaze",
   },
   {
     id: 3,
@@ -29,6 +37,10 @@ const pokedex = [
       "A carapaça de Squirtle não serve só para sua proteção. As ranhuras em sua superfície e a sua forma arredondada ajudam a minimizar a resistência na água permitindo que nade em alta velocidade.",
     tipo: "Water",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    altura: "0.5 m",
+    peso: "9,0 kg",
+    categoria: "Tiny Turtle",
+    habilidades: "Torrent",
   },
 ];
 
@@ -48,24 +60,22 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex, pokemon });
 });
 
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro.ejs");
+  const id = +req.params.id;
+  pokemon = pokedex.find((pokemon) => pokemon.id === id);
+  res.redirect("/#cards");
+});
+
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
-  res.redirect("/#cards");
 });
 
 app.get("/detalhes/:id", (req, res) => {
   const id = +req.params.id;
-  pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.redirect("/#cadastro");
-});
+  const pokemon = pokedex.find((pokemon) => pokemon.id === id);
 
-app.post("/update/:id", (req, res) => {
-  const id = +req.params.id - 1;
-  const newPokemon = req.body;
-  newPokemon.id = id + 1;
-  pokedex[id] = newPokemon;
-  pokemon = undefined;
-  res.redirect("/#cards");
+  res.render("detalhes", { pokemon });
 });

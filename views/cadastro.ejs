@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleCadastro.css">
+    <title>Cadastro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 300px;
+            height: 180px;
+            padding: 15px;
+            background-color: #265caa;
+            border-radius: 30px;
+            display: none;
+        }
+
+        .popup p {
+            color: yellow;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .popup .p1 {
+            color: white;
+            padding-top: 20px;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .popup button {
+            display: block;
+            background-color: red;
+            text-decoration: none;
+            color: white;
+            width: 100px;
+            height: 30px;
+            margin: 40px auto 0 auto;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+        <h1>Cadastre um novo Pokemon!</h1>
+        <section class="cadastro">
+            <div>
+                <form action="/create" method="POST">
+                    <p>* O número é cadastrado  de forma automática</p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required>
+                    <label for="tipo">Tipo: </label>
+                    <input type="text" name="tipo" id="tipo" required>
+                    <label for="imagem">Link da Imagem:</label>
+                    <input type="url" name="imagem" id="imagem" required>
+                    <label for="altura">Altura:</label>
+                    <input type="text" id="altura" name="altura" required>
+                    <label for="peso">Peso:</label>
+                    <input type="text" id="peso" name="peso" required>
+                    <label for="categoria">Categoria: </label>
+                    <input type="text" name="categoria" id="categoria" required>
+                    <label for="habilidades">Habilidade:</label>
+                    <input type="text" name="habilidades" id="habilidades" required>
+                    <button id="btnCadastrar" type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <img src="/img/pokedex.png" alt="">
+        </section>
+        <div id="popup" class="popup">
+            <p class="p1">Seu cadastro foi feito com sucesso!</p>
+            <p>Clique em FECHAR para ver o novo Pokemon ou aguarde 5 segundos.</p>
+            <button id="fechar">Fechar</button>
+        </div>
+    </main>
+
+    <%- include('./partials/footer.ejs') %> 
+
+</body>
+<script src="/js/script.js"></script>
+</script>
+</html>

@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes</title>
+    <link rel="stylesheet" href="/css/styleDetalhes.css">
 </head>
 <body>
-    <h1>VOCÊ VAI GANHAR 20K DOL FACIL</h1>
+
+    <%- include('./partials/header.ejs') %> 
+
+    <main>
+        <section class="cards">
+                <div class="card">
+                    <img src="<%=pokemon.imagem%>" alt=""> 
+                </div>
+                <div class="textodetalhes">
+                    <h1><%=pokemon.nome%></p></h1>
+                    <p>Nº: <span><%=pokemon.id%></span></p>
+                    <p>Descrição: <span><%=pokemon.descricao%></span></p>
+                    <p>Tipo: <span><%=pokemon.tipo%></span></p>  
+                    <p>Altura: <span><%=pokemon.altura%></span></p>
+                    <p>Peso: <span><%=pokemon.peso%></span></p> 
+                    <p>Categoria: <span><%=pokemon.categoria%></span></p>
+                    <p>Habilidades: <span><%=pokemon.habilidades%></span></p> 
+                </div>
+        </section>
+        </main>
+
+        <footer>
+            <p>&copy; Todos os direitos reservados <a target="_blank" href="">@mateus_suricato</a></p>
+            <p>Dados retirados de <a href="https://www.pokemon.com/br/pokedex/">Pokedex</a></p>
+        </footer>
+
 </body>
 </html>
