@@ -1,3 +1,4 @@
+require("dotenv").config();
 import express from "express";
 import path from "path";
 
@@ -48,7 +49,7 @@ app.set("view engine", "ejs"); // reconhecendo o ejs
 app.use(express.static(path.join(__dirname, "public"))); //reconhecendo a pasta public
 app.use(express.urlencoded());
 
-const port = 3004;
+const port = process.env.PORT || 3004;
 
 app.listen(port, () => {
   console.log(`Rodando na porta ${port}`);
