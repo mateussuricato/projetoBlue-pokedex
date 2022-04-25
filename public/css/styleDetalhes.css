@@ -49,6 +49,7 @@ section.cards {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 5rem auto 0 auto;
+    margin-right: 20px;
 }
 
 section.cards div.card{

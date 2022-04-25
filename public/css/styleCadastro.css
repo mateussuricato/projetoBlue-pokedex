@@ -61,7 +61,7 @@ h1 {
 }
 
 .cadastro div form {
-    padding: 50px;
+
     width: 70%;
     margin: auto;
 }
@@ -80,7 +80,7 @@ h1 {
     display: block;
     border: 1px solid blue;
     background-color: white;
-    width: 300px;
+    width: 200px;
     height: 50px;
     cursor: pointer;
     font-size: 30px;
