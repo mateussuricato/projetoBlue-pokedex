@@ -48,7 +48,7 @@ app.set("view engine", "ejs"); // reconhecendo o ejs
 app.use(express.static(path.join(__dirname, "public"))); //reconhecendo a pasta public
 app.use(express.urlencoded());
 
-const port = process.env.PORT || 3004;
+const port = process.env.PORT || 3005;
 
 app.listen(port, () => {
   console.log(`Rodando na porta ${port}`);
