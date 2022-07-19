@@ -3,6 +3,10 @@
 ## Descrição
 Esse projeto foi realizado para o curso da Blue EdTech módulo II.
 
+Ele possui dados mocados (sem banco de dados).
+
+Nesse projeto eu estava dando meus primeiros passos para criação de um CRUD.
+
 Clique na imagem(pokeball) abaixo para acessar o projeto:
 
 <a href="https://pokedex-mateussuricato.herokuapp.com/" target="_blank"><img style="width:10%" src="./public/img/PokéBall.png" alt="ícone pokedex"></a>
